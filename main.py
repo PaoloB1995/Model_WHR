@@ -244,7 +244,7 @@ def run_whirlpool_deg_model():
     for idx in range(0, len(data_tot)-2500, 1250):
         print("Real value")
         d_true, d_cycle, d = d_model.predict(data_tot[data_tot.columns].iloc[idx:idx+2500])
-        deg_trend_true.append(d)
+        deg_trend_true.append(d_true)
 
     fig, ax = plt.subplots(figsize=(12,4))
     ax.plot(range(len(deg_trend_true)), deg_trend_true)
